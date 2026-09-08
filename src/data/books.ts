@@ -1,0 +1,27 @@
+import type { Book } from "../types";
+
+export const DEFAULT_BOOKS: Book[] = [
+  { id: "pragprog", title: "The Pragmatic Programmer", author: "David Thomas & Andrew Hunt", pages: 352, tag: "craft", read: false, rating: 0 },
+  { id: "cleancode", title: "Clean Code", author: "Robert C. Martin", pages: 464, tag: "craft", read: false, rating: 0 },
+  { id: "mythical", title: "The Mythical Man-Month", author: "Frederick P. Brooks Jr.", pages: 322, tag: "org", read: false, rating: 0 },
+  { id: "peopleware", title: "Peopleware", author: "Tom DeMarco & Timothy Lister", pages: 256, tag: "org", read: false, rating: 0 },
+  { id: "phoenix", title: "The Phoenix Project", author: "Gene Kim, Kevin Behr & George Spafford", pages: 432, tag: "org", read: false, rating: 0 },
+  { id: "accelerate", title: "Accelerate", author: "Nicole Forsgren, Jez Humble & Gene Kim", pages: 288, tag: "org", read: false, rating: 0 },
+  { id: "teamtopo", title: "Team Topologies", author: "Matthew Skelton & Manuel Pais", pages: 224, tag: "org", read: false, rating: 0 },
+  { id: "managerspath", title: "The Manager's Path", author: "Camille Fournier", pages: 248, tag: "leadership", read: false, rating: 0 },
+  { id: "staffeng", title: "Staff Engineer", author: "Will Larson", pages: 294, tag: "leadership", read: false, rating: 0 },
+  { id: "elegantpuzzle", title: "An Elegant Puzzle", author: "Will Larson", pages: 276, tag: "leadership", read: false, rating: 0 },
+  { id: "ddia", title: "Designing Data-Intensive Applications", author: "Martin Kleppmann", pages: 616, tag: "craft", read: false, rating: 0 },
+  { id: "legacycode", title: "Working Effectively with Legacy Code", author: "Michael Feathers", pages: 456, tag: "craft", read: false, rating: 0 },
+  { id: "radicalcandor", title: "Radical Candor", author: "Kim Scott", pages: 272, tag: "leadership", read: false, rating: 0 },
+  { id: "highoutput", title: "High Output Management", author: "Andrew Grove", pages: 256, tag: "leadership", read: false, rating: 0 },
+  { id: "xpexplained", title: "Extreme Programming Explained", author: "Kent Beck", pages: 224, tag: "agile", read: false, rating: 0 },
+  { id: "storymapping", title: "User Story Mapping", author: "Jeff Patton", pages: 324, tag: "agile", read: false, rating: 0 },
+  { id: "scrumbook", title: "Scrum: The Art of Doing Twice the Work in Half the Time", author: "Jeff Sutherland", pages: 256, tag: "agile", read: false, rating: 0 },
+  { id: "agileestimating", title: "Agile Estimating and Planning", author: "Mike Cohn", pages: 368, tag: "agile", read: false, rating: 0 },
+  { id: "kanbanbook", title: "Kanban: Successful Evolutionary Change", author: "David J. Anderson", pages: 278, tag: "agile", read: false, rating: 0 },
+  { id: "agileretros", title: "Agile Retrospectives", author: "Esther Derby & Diana Larsen", pages: 170, tag: "agile", read: false, rating: 0 },
+  { id: "coachingagile", title: "Coaching Agile Teams", author: "Lyssa Adkins", pages: 256, tag: "agile", read: false, rating: 0 },
+  { id: "leanstartup", title: "The Lean Startup", author: "Eric Ries", pages: 336, tag: "agile", read: false, rating: 0 },
+  { id: "contdelivery", title: "Continuous Delivery", author: "Jez Humble & David Farley", pages: 512, tag: "craft", read: false, rating: 0 },
+];
