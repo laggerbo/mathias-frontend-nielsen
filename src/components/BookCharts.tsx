@@ -1,10 +1,16 @@
 import { PieChart } from "./PieChart";
 import type { Book } from "../types";
 
-const RATING_COLORS = ["#d9d2c1", "#e6b566", "#e0a83f", "#c98a1f", "#a8651a", "#7d4b12"];
-const READ_COLORS = ["#2e7d4f", "#d9d2c1"];
+function getCardBackgroundColor() {
+  if (typeof window === "undefined") return "#1f2024";
+  return getComputedStyle(document.documentElement).getPropertyValue("--bg-raised").trim();
+}
 
 export function BookCharts({ books }: { books: Book[] }) {
+  const bgColor = getCardBackgroundColor();
+  const RATING_COLORS = [bgColor, "#e6b566", "#e0a83f", "#c98a1f", "#a8651a", "#7d4b12"];
+  const READ_COLORS = ["#2e7d4f", bgColor];
+
   const readCount = books.filter((b) => b.read).length;
   const notReadCount = books.length - readCount;
 

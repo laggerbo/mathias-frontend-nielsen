@@ -104,6 +104,7 @@
     border-bottom: 1px solid var(--line);
     margin-bottom: 2rem;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
   nav.tabs button {
     font-family: 'IBM Plex Mono', monospace;
@@ -151,6 +152,7 @@
   /* Books */
   .table-scroll {
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     border: 1px solid var(--line);
     border-radius: 6px;
     background: var(--bg-raised);
@@ -418,4 +420,80 @@
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.75rem;
     color: var(--ink-soft);
+  }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    .wrap { padding: 1.75rem 1.1rem 3.5rem; }
+    .stamp { font-size: 0.7rem; padding: 0.22rem 0.5rem; }
+    .sub { font-size: 1rem; margin-bottom: 1.8rem; }
+    nav.tabs {
+      flex-direction: column;
+      align-items: stretch;
+      overflow-x: visible;
+      border-bottom: none;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      margin-bottom: 1.5rem;
+    }
+    nav.tabs button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-right: 0;
+      padding: 0.85rem 0.9rem;
+      font-size: 0.8rem;
+      border-bottom: 1px solid var(--line);
+    }
+    nav.tabs button:last-child { border-bottom: none; }
+    nav.tabs button.active::after {
+      top: 0; bottom: 0; left: 0; right: auto;
+      width: 3px; height: auto;
+    }
+    h2.section-title { font-size: 1.5rem; }
+    p.section-desc { font-size: 0.92rem; margin-bottom: 1.3rem; }
+
+    /* Reading list becomes stacked cards instead of a horizontal-scroll table */
+    .table-scroll { overflow-x: visible; border: none; background: none; }
+    table.book-table { min-width: 0; display: block; }
+    .book-table thead { display: none; }
+    .book-table tbody { display: block; }
+    .book-table tbody tr {
+      display: block;
+      background: var(--bg-raised);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0.3rem 1rem;
+      margin-bottom: 0.75rem;
+    }
+    .book-table tbody tr:last-child { margin-bottom: 0; }
+    .book-table td {
+      display: block;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .book-table tbody tr td:last-child { border-bottom: none; }
+    .book-table td::before {
+      content: attr(data-label);
+      display: block;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--ink-soft);
+      margin-bottom: 0.3rem;
+    }
+
+    /* Bigger touch targets */
+    .read-toggle { width: 30px; height: 30px; }
+    .stars button { padding: 4px; }
+    .idea-toggle { padding: 0.45rem 0.7rem; }
+
+    .idea-grid { grid-template-columns: 1fr; gap: 0.7rem; }
+
+    .chart-card .chart-holder { height: 220px; }
+
+    .step { grid-template-columns: auto 1fr; padding: 0.9rem 1rem; gap: 0.7rem; }
+    .step-code { font-size: 0.76rem; }
+
+    .first-project-space, .first-project-space textarea { min-height: 260px; }
   }

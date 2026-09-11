@@ -22,6 +22,7 @@ export function PieChart({ title, labels, data, colors, emptyLabel }: PieChartPr
     const chartData = hasData ? data : [1];
     const chartLabels = hasData ? labels : [fallbackLabel];
     const chartColors = hasData ? colors : ["#d9d2c1"];
+    const inkColor = getComputedStyle(document.documentElement).getPropertyValue("--ink").trim();
 
     if (chartRef.current) {
       chartRef.current.data.labels = chartLabels;
@@ -45,6 +46,7 @@ export function PieChart({ title, labels, data, colors, emptyLabel }: PieChartPr
             position: "bottom",
             labels: {
               boxWidth: 11,
+              color: inkColor,
               font: { family: "'IBM Plex Mono', monospace", size: 11 },
               generateLabels: (chart) => {
                 const ds = chart.data.datasets[0];

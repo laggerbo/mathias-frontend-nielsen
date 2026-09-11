@@ -100,7 +100,7 @@ export function BooksTab({ books, setBooks }: BooksTabProps) {
           <tbody>
             {sortedBooks.map((b) => (
               <tr key={b.id} className={b.read ? "is-read" : ""}>
-                <td>
+                <td data-label="Read">
                   <button
                     className={"read-toggle" + (b.read ? " checked" : "")}
                     onClick={() => toggleRead(b.id)}
@@ -111,18 +111,18 @@ export function BooksTab({ books, setBooks }: BooksTabProps) {
                     <CheckIcon />
                   </button>
                 </td>
-                <td className="col-title">{b.title}</td>
-                <td className="col-author">{b.author}</td>
-                <td>
+                <td className="col-title" data-label="Title">{b.title}</td>
+                <td className="col-author" data-label="Author">{b.author}</td>
+                <td data-label="Category">
                   <span className="tag">{b.tag}</span>
                 </td>
-                <td>
+                <td data-label="Pages">
                   <span className="pages">{b.pages}p</span>
                 </td>
-                <td>
+                <td data-label="Rating">
                   <Stars value={b.rating} onChange={(v) => setRating(b.id, v)} />
                 </td>
-                <td>
+                <td data-label="Audiobook">
                   <a className="listen-link" href={audibleSearch(b.title, b.author)} target="_blank" rel="noopener noreferrer">
                     Find it ↗
                   </a>

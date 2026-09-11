@@ -50,7 +50,7 @@ export default function App() {
           </span>
         </button>
         <button className={tab === "ideas" ? "active" : ""} onClick={() => setTab("ideas")}>
-          CHANGELOG.md{" "}
+          docs/ideas{" "}
           <span className="count">
             {triedCount}/{ideas.length}
           </span>
