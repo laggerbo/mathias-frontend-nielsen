@@ -14,11 +14,30 @@ export const SETUP_STEPS: SetupStep[] = [
     linkText: "Download Git",
   },
   {
-    title: "Find the project on GitHub",
-    desc: "Open the repository, then clone it to your machine so you've got a local copy to run and edit.",
-    // TODO: swap this for the repo's real URL once it's pushed to GitHub.
-    href: "https://github.com",
-    linkText: "Open GitHub",
-    code: "git clone <paste-the-repository-url-here>",
+    title: "Install Node.js",
+    desc: "Gives you npm, which installs the project's dependencies and runs it.",
+    href: "https://nodejs.org/",
+    linkText: "Download Node.js",
+  },
+  {
+    title: "Clone the project from GitHub",
+    desc: "Download a local copy of the repository so you can run and edit it.",
+    href: "https://github.com/laggerbo/mathias-frontend-nielsen",
+    linkText: "Open on GitHub",
+    code: "git clone https://github.com/laggerbo/mathias-frontend-nielsen.git",
+  },
+  {
+    title: "Install the dependencies",
+    desc: "Open the project folder in VS Code, then run this in its terminal to download the packages it needs.",
+    href: "https://github.com/laggerbo/mathias-frontend-nielsen#run-it-locally",
+    linkText: "See the README",
+    code: "cd mathias-frontend-nielsen\nnpm install",
+  },
+  {
+    title: "Run the project",
+    desc: "Starts a local dev server. Open the URL it prints (usually http://localhost:5173) in your browser.",
+    href: "https://github.com/laggerbo/mathias-frontend-nielsen#run-it-locally",
+    linkText: "See the README",
+    code: "npm run dev",
   },
 ];

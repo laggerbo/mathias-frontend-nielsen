@@ -5,12 +5,21 @@ ideas, and a "my first project" get-started guide. Built with React + Vite.
 
 ## Run it locally
 
-```bash
-npm install
-npm run dev
-```
-
-Then open the URL Vite prints (usually `http://localhost:5173`).
+1. **Install [Node.js](https://nodejs.org/)** (includes `npm`) if you don't have it already.
+2. **Clone the repo:**
+   ```bash
+   git clone https://github.com/laggerbo/mathias-frontend-nielsen.git
+   cd mathias-frontend-nielsen
+   ```
+3. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+4. **Start the dev server:**
+   ```bash
+   npm run dev
+   ```
+5. Open the URL Vite prints (usually `http://localhost:5173`) in your browser.
 
 ## Build for production
 
@@ -25,19 +34,17 @@ Preview the production build locally with:
 npm run preview
 ```
 
-## Push it to GitHub
+## Download the repo
+
+The project lives at
+[github.com/laggerbo/mathias-frontend-nielsen](https://github.com/laggerbo/mathias-frontend-nielsen).
+Clone it with:
 
 ```bash
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/<your-username>/mathias-frontend-nielsen.git
-git push -u origin main
+git clone https://github.com/laggerbo/mathias-frontend-nielsen.git
 ```
 
-Once it's pushed, open `src/data/setupSteps.js` and swap the placeholder GitHub link
-for the real repository URL — that's what shows up on the "My first project" tab.
+or use GitHub's "Code" button to download a ZIP instead.
 
 ## Host it on a URL
 
