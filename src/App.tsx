@@ -14,7 +14,7 @@ function mergeWithDefaults<T extends { id: string }>(saved: T[] | null, defaults
 }
 
 export default function App() {
-  const [tab, setTab] = useState<TabKey>("books");
+  const [tab, setTab] = useState<TabKey>("first-project");
   const [books, setBooks] = useState<Book[]>(() =>
     mergeWithDefaults(safeLoad<Book[] | null>(STORAGE_KEYS.books, null), DEFAULT_BOOKS)
   );
@@ -32,22 +32,18 @@ export default function App() {
     <div className="wrap">
       <span className="stamp">RELEASE v1.0.0 · tagged today</span>
       <h1 className="headline">
-        Your dev journey
+        Your home project
         <br />
         starts here.
       </h1>
       <p className="sub">
-        Happy birthday. This one's a small app instead of a card — a reading list, a stack of project ideas, and a
-        place to write your very first lines of code, all in one page. Nothing here needs an install:{" "}
-        <code>read → build → ship</code>.
+        Happy birthday Mathias. This one's a small app instead of a card — a reading list, a stack of project ideas, and a
+        place to start a new home project. Go nuts!
       </p>
 
       <nav className="tabs">
-        <button className={tab === "books" ? "active" : ""} onClick={() => setTab("books")}>
-          docs/reading-list{" "}
-          <span className="count">
-            {readCount}/{books.length}
-          </span>
+        <button className={tab === "first-project" ? "active" : ""} onClick={() => setTab("first-project")}>
+          my-first-project/
         </button>
         <button className={tab === "ideas" ? "active" : ""} onClick={() => setTab("ideas")}>
           docs/ideas{" "}
@@ -55,14 +51,17 @@ export default function App() {
             {triedCount}/{ideas.length}
           </span>
         </button>
-        <button className={tab === "first-project" ? "active" : ""} onClick={() => setTab("first-project")}>
-          my-first-project/
+        <button className={tab === "books" ? "active" : ""} onClick={() => setTab("books")}>
+          docs/reading-list{" "}
+          <span className="count">
+            {readCount}/{books.length}
+          </span>
         </button>
       </nav>
 
-      {tab === "books" && <BooksTab books={books} setBooks={setBooks} />}
-      {tab === "ideas" && <IdeasTab ideas={ideas} setIdeas={setIdeas} />}
       {tab === "first-project" && <FirstProjectTab />}
+      {tab === "ideas" && <IdeasTab ideas={ideas} setIdeas={setIdeas} />}
+      {tab === "books" && <BooksTab books={books} setBooks={setBooks} />}
 
       <footer className="pagefoot">
         Your progress here is saved on this device only. Come back anytime — nothing resets unless you want it to.
